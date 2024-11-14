@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static %}
+{% block content%}
+<div class="text-center">
+<h2>Welcome to Library<span><br>
+{% if user.is_authenticated %}
+<h2>{{user.username}}</h2>
+{% else %}
+    Guest</span></h2>
+{% endif %}
+    </div>
+{% endblock %}
